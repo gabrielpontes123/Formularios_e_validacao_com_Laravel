@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Route; use App\User; /*
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/userlist', function () { $umUsuarioQualquer = new User; 
+    $umUsuarioQualquer->name = 'Gabriel';
+
+    $timestamp = date("Y-m-d-h-i-sa"); $umUsuarioQualquer->email = 
+    "adsf@asdf.com".$timestamp;
+    
+    $umUsuarioQualquer->password = '123'; $umUsuarioQualquer->save(); return 
+    User::all(); }); #+END_SRC[
