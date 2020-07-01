@@ -25,3 +25,9 @@ Route::get('/userlist', function () { $umUsuarioQualquer = new User;
     
     $umUsuarioQualquer->password = '123'; $umUsuarioQualquer->save(); return 
     User::all(); }); #+END_SRC[
+
+Route::get('FormTarefaDeBackup', 'TarefaDeBackupController@create')->name('FormTarefaDeBackup.create');
+Route::post('FormTarefaDeBackup', 'TarefaDeBackupController@store')->name('FormTarefaDeBackup.store');
+
+Route::get('FormAdicionarProduto', 'AdicionarProdutoController@create')->name('FormAdicionarProduto.create');
+Route::post('FormAdicionarProduto', 'AdicionarProdutoController@store')->name('FormAdicionarProduto.store');
